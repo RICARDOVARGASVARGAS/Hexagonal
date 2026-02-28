@@ -33,6 +33,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::connection('store')->dropIfExists('client_product');
+        Schema::dropIfExists('client_product');
     }
 };
