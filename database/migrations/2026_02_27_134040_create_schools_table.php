@@ -23,6 +23,7 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('schools');
+        // Debe usar la misma conexión que el up()
+        Schema::connection('academy')->dropIfExists('schools');
     }
 };
